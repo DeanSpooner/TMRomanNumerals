@@ -37,5 +37,9 @@ describe("returns a matching number to a numeral", () => {
     expect(myFunc(romanString61)).toBe(61);
     const romanString40 = "XL";
     expect(myFunc(romanString40)).toBe(40);
+    const romanString3759 = "MMMDCCLIX";
+    expect(myFunc(romanString3759)).toBe(3759);
+    const romanString3999 = "MMMCMXCIX";
+    expect(myFunc(romanString3999)).toBe(3999);
   });
 });

@@ -16,5 +16,6 @@ C 100
 D 500
 M 1,000
 
-- If the current letter's value is less than the next one, you minus this value from the total! Otherwise add it.
-- Use an object to store Roman Numeral values
+- If the current letter's value is less than the next one, you minus this value from the total! Otherwise add it;
+- Use an object to store Roman Numeral values;
+- Refactor tests, use non-Roman Numeral letters.

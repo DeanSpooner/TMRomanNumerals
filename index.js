@@ -1,24 +1,26 @@
 const myFunc = (romanString) => {
   let splitString = romanString.split("");
+
+  const romanNums = {
+    I: 1,
+    V: 5,
+    X: 10,
+    L: 50,
+    C: 100,
+    D: 500,
+    M: 1000,
+  };
+
   let arabicNum = 0;
-  const is40 = splitString[i] === "X" && splitString[i + 1] === "L";
+
   for (let i = 0; i < splitString.length; i += 1) {
-    if (is40) {
-      arabicNum -= 10;
-    } else if (splitString[i] === "L") {
-      arabicNum += 50;
-    } else if (
-      splitString[i] === "I" &&
-      splitString[i + 1] !== "I" &&
+    if (
+      romanNums[splitString[i]] < romanNums[splitString[i + 1]] &&
       splitString[i + 1]
     ) {
-      arabicNum -= 1;
-    } else if (splitString[i] === "X") {
-      arabicNum += 10;
-    } else if (splitString[i] === "V") {
-      arabicNum += 5;
-    } else if (splitString[i] === "I") {
-      arabicNum += 1;
+      arabicNum -= romanNums[splitString[i]];
+    } else {
+      arabicNum += romanNums[splitString[i]];
     }
   }
 
